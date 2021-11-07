@@ -7,13 +7,17 @@ html {
 }
 
 body { 
-    min-inline-size: 106rem;
+    min-inline-size: 120rem;
     block-size: 100vh;
     font: {
         family: abs.$main;
         size: 1.6rem;
     }
     background-color: map.get(abs.$clr, 'gray', '100');
+    @media (prefers-color-scheme: dark) {
+        // *NOTE*: In this case lightness must be less than the darkMode variable due to it makes the background look not as uniform as the other colors in the page.
+        background-color: color.scale(map.get(abs.$clr, 'gray', '100'), $lightness: -5%);
+    }
 }
 
 * {

@@ -12,6 +12,9 @@
         }
         padding: 1.6rem;
         background-color: map.get(abs.$clr, 'blue', '300');
+        @media (prefers-color-scheme: dark) {
+            background-color: color.scale(map.get(abs.$clr, 'blue', '300'), $lightness: abs.$darkMode);
+        }
 
         &__title { 
             margin: 0;
@@ -23,6 +26,10 @@
         flex-grow: 1;
         @include less.flexbox($jt-content: space-between, $al-items: center);
         background-color: map.get(abs.$clr, 'blue', '100');
+
+        @media (prefers-color-scheme: dark) {
+            background-color: color.scale(map.get(abs.$clr, 'blue', '100'), $lightness: abs.$darkMode);
+        }
 
         &Left {
             @include less.flexbox($al-items: center);
@@ -58,6 +65,9 @@
             padding: .8rem;
             border-radius: 50%;
             background-color: map.get(abs.$clr, 'green', '100');
+            @media (prefers-color-scheme: dark) {
+                background-color: color.scale(map.get(abs.$clr, 'green', '100'), $lightness: abs.$darkMode);
+            }
         }
     }
 }
