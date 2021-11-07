@@ -9,6 +9,7 @@ The eighth project from Juan Pablo's course of [CSS Grid and Flexbox](https://ww
 * [What I learned](#what-i-learned)
 * [Lectures](#lectures)
 * [Preview](#preview)
+    - [Dark-mode](#dark-mode)
 * [Reports](#reports)
     - [GTmetrix](#gtmetrix)
     - [Lighthouse](#lighthouse)
