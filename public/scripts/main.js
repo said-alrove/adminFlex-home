@@ -1,0 +1,2 @@
+const barLeft=document.querySelector(".header_barLeft");barLeft.addEventListener("click",(e=>{const t=e.target.classList,r=document.querySelector(".sidebar"),a=document.querySelector(".fa-arrow-left"),s=document.querySelector(".fa-arrow-right");t.contains("fa-arrow-left")?(r.classList.add("u-hidden-menu"),a.style.display="none",s.style.display="block"):t.contains("fa-arrow-right")&&(r.classList.remove("u-hidden-menu"),s.style.display="none",a.style.display="block")}));
+//# sourceMappingURL=main.js.map
