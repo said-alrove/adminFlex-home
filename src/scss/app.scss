@@ -1,0 +1,43 @@
+//********************************* 
+//* 7-1 PATTERN 
+//*********************************
+
+//********************************* 
+//* BUILT-IN MODULES 
+//*********************************
+@use 'sass:math';
+@use 'sass:meta';
+@use 'sass:map';
+@use 'sass:list';
+@use 'sass:color';
+@use 'sass:string';
+@use 'sass:selector';
+
+//********************************* 
+//* ABSTRACTS 
+//*********************************
+@use '01-abstracts/index' as abs;
+
+//********************************* 
+//* VENDORS 
+//*********************************
+@use '02-vendors/lessier' as less;
+
+//********************************* 
+//* BASE 
+//*********************************
+@import 
+    '03-base/normalize',
+    '03-base/base',
+    '03-base/helpers';
+
+//********************************* 
+//* COMPONENTS 
+//*********************************
+@import 
+    '04-components/panel',
+    '04-components/header',
+    '04-components/main',
+    '04-components/sidebar',
+    '04-components/content',
+    '04-components/formulario';

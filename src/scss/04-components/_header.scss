@@ -1,0 +1,63 @@
+//********************************* 
+//* HEADER 
+//*********************************
+.header {
+    @include less.flexbox();
+    &_siteName {
+        @include less.flexbox($al-items: center);
+        flex: {
+            grow: 0;
+            shrink: 0;
+            basis: 32rem;
+        }
+        padding: 1.6rem;
+        background-color: map.get(abs.$clr, 'blue', '300');
+
+        &__title { 
+            margin: 0;
+            color: map.get(abs.$clr, 'white'); 
+        }
+    }
+
+    &_bar {
+        flex-grow: 1;
+        @include less.flexbox($jt-content: space-between, $al-items: center);
+        background-color: map.get(abs.$clr, 'blue', '100');
+
+        &Left {
+            @include less.flexbox($al-items: center);
+            padding: 1.6rem;
+
+            i { 
+                font-size: 2.5rem;
+                color: map.get(abs.$clr, 'white'); 
+            }
+
+            .fa-arrow-right { display: none; }
+        }
+
+        &Right { 
+            .header_list { @include less.flexbox(); }
+        }
+    }
+
+    &_listItem {
+        @include less.flexbox($al-items: center);
+    }
+
+    &_listLink { 
+        display: inline-block;
+        padding: 2.6rem 1.6rem;
+        color: map.get(abs.$clr, 'white'); 
+        transition: all 150ms ease-in-out;
+
+        &:hover { background-color: map.get(abs.$clr, 'blue', '200'); }
+
+        &_span {
+            margin-inline-start: .8em;
+            padding: .8rem;
+            border-radius: 50%;
+            background-color: map.get(abs.$clr, 'green', '100');
+        }
+    }
+}

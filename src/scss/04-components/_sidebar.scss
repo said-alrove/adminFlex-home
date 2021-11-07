@@ -1,0 +1,84 @@
+//********************************* 
+//* SIDEBAR 
+//*********************************
+.sidebar {
+    flex: {
+        grow: 0;
+        shrink: 0;
+        basis: 32rem;
+    }
+    padding: 1.6rem;
+    background-color: map.get(abs.$clr, 'gray', '200');
+    color: map.get(abs.$clr, 'white');
+    transition: margin-inline-start 250ms ease-in-out;
+
+    @at-root {
+        &_user {
+            @include less.flexbox($jt-content: space-evenly, $al-items: center);
+
+            &Pic { max-inline-size: 8rem; }
+
+            &Welcome { 
+                font-weight: bold;
+
+                &__name {
+                    display: block;
+                    font-weight: normal;
+                }
+            }
+        }
+
+        .searcher { 
+            margin-block-start: 1.6rem; 
+
+            input[type="text"] {
+                inline-size: 100%;
+                block-size: 4.8rem;
+                padding-inline-start: 1.6rem;
+                border: none;
+                border-radius: 1.6rem;
+            }
+        }
+
+        .adminMenu {
+            margin-block-start: 3.2rem;
+
+            &_list { padding-inline: 1.6rem; }
+
+            &_item { 
+                padding: 1.2rem .8rem; 
+
+                &:hover .adminMenu_subList,
+                &:focus .adminMenu_subList { display: block; }
+            }
+
+            &_link,
+            &_subLink {
+                padding: .8rem;
+                color: map.get(abs.$clr, 'white');
+                transition: padding-inline-start 250ms ease-in-out;
+
+                &:hover,
+                &:focus {
+                    padding-inline-start: 3.2rem;
+                    background-color: map.get(abs.$clr, 'blue', '100');
+                }
+            }
+
+            &_subList {
+                display: none;
+                margin-block-start: 1.6rem;
+                padding: 1.6rem;
+                background-color: map.get(abs.$clr, 'gray', '300');
+            }
+
+            &_subItem { 
+                margin-block-end: 1.6rem; 
+
+                &:last-of-type { margin-block-end: 0; }
+            }
+
+            &_subLink { color: map.get(abs.$clr, 'white'); }
+        }
+    }
+}
