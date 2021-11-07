@@ -27,12 +27,19 @@ The eighth project from Juan Pablo's course of [CSS Grid and Flexbox](https://ww
 
 * I had a few issues trying to set up the formulario with Netlify due to the data isn't received as wished in the administration panel, the checkbox section is the only one that's being received which is weird because the structure of the form is practically the same in comparation with other projects where I've used the [Netlify forms feature](https://docs.netlify.com/forms/setup/). By now I've not found any solution to it but I'll keep seeking.
 
+* I added the **prefers-color-scheme** feature for dark-mode by making a little changes in the lightness of the main colors in the layout, I didn't use the light-mode due to in most of the cases when dark-mode isn't specified light-mode is used instead (implicitly) and viceversa, therefore the default colors that I'm using are already the light ones.
+
+> **Note:** I didn't try to change the colors directly from the variables because there are some components where the change of lightness isn't as accurate as wished, therefore it's better to modif each individual case where the dark-mode looks good.
+
 ## Lectures 📚
 - [Alternative Text](https://webaim.org/techniques/alttext/)
 - [Git removing upstream from local respository](https://stackoverflow.com/questions/19801455/git-removing-upstream-from-local-repository)
 
 ## Preview 👩‍💻
 ![](readme/screenshot.png)
+
+### Dark-mode
+![](readme/darkMode.png)
 
 ## Reports 🎯
 
