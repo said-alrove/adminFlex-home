@@ -34,10 +34,28 @@
 //********************************* 
 //* COMPONENTS 
 //*********************************
+
+//********************************* 
+//* PANEL 
+//*********************************
+.container {
+    &-panel {
+        @include less.flexbox($dir: column);
+        min-block-size: 100vh;    
+    }
+}
+
+@import '04-components/header';
+
+//********************************* 
+//* MAIN 
+//*********************************
+.main-container {
+    flex-grow: 1;
+    @include less.flexbox();
+}
+
 @import 
-    '04-components/panel',
-    '04-components/header',
-    '04-components/main',
     '04-components/sidebar',
     '04-components/content',
     '04-components/formulario';

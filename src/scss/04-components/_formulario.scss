@@ -2,109 +2,124 @@
 //* FORMULARIO 
 //*********************************
 .formulario {
-    @include less.flexbox($jt-content: space-evenly, $wrap: wrap);
-
     @at-root {
-        .field {
+        &__fieldset {
+            @include less.flexbox($jt-content: space-evenly, $wrap: wrap);
+            border: none;
+        }
+
+        &__title {
+            font: {
+                size: 2.2rem;
+                weight: bold;
+            }
+            margin-block: 1rem;
+        }
+
+        .-reCaptcha {
+            @include less.flexbox($jt-content: flex-end);
+        }
+    }   
+}
+
+.field {
+    flex: {
+        grow: 0;
+        shrink: 0;
+        basis: calc(50% - 1.6rem);
+    }
+    @include less.flexbox($al-items: center);
+    margin-block-end: 1.6rem;
+
+    &__label {
+        flex: {
+            grow: 0;
+            shrink: 0;
+            basis: 30%;
+        }
+        padding-inline: .8rem;
+    }
+
+    &__input {
+        flex: {
+            grow: 0;
+            shrink: 0;
+            basis: 70%;
+        }
+        block-size: 3.2rem;
+    }
+
+    &-expand {
+        flex: {
+            grow: 0;
+            shrink: 0;
+            basis: calc(100% - 1.6rem) !important;
+        }
+
+        .field__label,
+        .field__submit {
+            align-self: flex-start;
             flex: {
                 grow: 0;
                 shrink: 0;
-                basis: calc(50% - 1.6rem);
-            }
-            @include less.flexbox($al-items: center);
-            margin-block-end: 1.6rem;
-
-            &__label {
-                flex: {
-                    grow: 0;
-                    shrink: 0;
-                    basis: 30%;
-                }
-                padding-inline: .8rem;
-            }
-
-            &__input {
-                flex: {
-                    grow: 0;
-                    shrink: 0;
-                    basis: 70%;
-                }
-                block-size: 3.2rem;
-            }
-
-            &-expand {
-                flex: {
-                    grow: 0;
-                    shrink: 0;
-                    basis: calc(100% - 1.6rem);
-                }
-
-                .field__label,
-                .field__submit {
-                    align-self: flex-start;
-                    flex: {
-                        grow: 0;
-                        shrink: 0;
-                        basis: 15%;
-                    }
-                }
-
-                .field__submit {
-                    display: block;
-                    padding: .8rem 1.6rem;
-                    background-color: map.get(abs.$clr, 'blue', '100');
-                    color: map.get(abs.$clr, 'white');
-                    text-align: center;
-                    text-decoration: none;
-                    transition: background-color 250ms ease-in-out;
-
-                    &:hover {
-                        background-color: map.get(abs.$clr, 'blue', '400');
-                        cursor: pointer;
-                    }
-                }
-            }
-
-            &-submit {
-                @include less.flexbox($jt-content: flex-end);
-            }
-
-            &__input,
-            &__label,
-            &__textarea,
-            &__submit {
-                padding: 1.6rem .8rem;
-                appearance: none;
-                border: none;
-                border-radius: .5rem;
-                outline: none;
-            }
-
-            &__input,
-            &__textarea { border: 1px solid map.get(abs.$clr, 'black') !important; }
-
-            &__textarea { 
-                flex-grow: 1;
-                resize: none;
-                padding: 1.6rem !important; 
-            }
-
-            &__input:focus,
-            &__label:focus,
-            &__textarea:focus,
-            &__submit:focus {
-                outline: 2px solid black;
-            }
-
-            .membershipOptions {
-                flex-grow: 1;
-                @include less.flexbox();
-
-                &__input {
-                    margin-inline: .8rem;
-                    inline-size: 1.6rem;
-                }
+                basis: 15%;
             }
         }
-    }   
+
+        .field__submit {
+            display: block;
+            padding: .8rem 1.6rem;
+            background-color: map.get(abs.$clr, 'blue', '100');
+            color: map.get(abs.$clr, 'white');
+            text-align: center;
+            text-decoration: none;
+            transition: background-color 250ms ease-in-out;
+
+            &:hover {
+                background-color: map.get(abs.$clr, 'blue', '400');
+                cursor: pointer;
+            }
+        }
+    }
+
+    &-submit {
+        @include less.flexbox($jt-content: flex-end);
+    }
+
+    &__input,
+    &__label,
+    &__textarea,
+    &__submit {
+        padding: 1.6rem .8rem;
+        appearance: none;
+        border: none;
+        border-radius: .5rem;
+        outline: none;
+    }
+
+    &__input,
+    &__textarea { border: 1px solid map.get(abs.$clr, 'black') !important; }
+
+    &__textarea { 
+        flex-grow: 1;
+        resize: none;
+        padding: 1.6rem !important; 
+    }
+
+    &__input:focus,
+    &__label:focus,
+    &__textarea:focus,
+    &__submit:focus {
+        outline: 2px solid black;
+    }
+
+    .membershipOptions {
+        flex-grow: 1;
+        @include less.flexbox();
+
+        &__input {
+            margin-inline: .8rem;
+            inline-size: 1.6rem;
+        }
+    }
 }

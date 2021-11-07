@@ -240,66 +240,67 @@
                     </div>
                 </aside>
                 <div class="content">
-                    <header class="content_header">
-                        <h2 class="content_title">
-                            Costumers administration
-                        </h2>
-                    </header>
                     <form 
                         action="POST" 
                         class="formulario" 
-                        name="Costumers_administration" 
+                        name="costumers_administration" 
                         data-netlify="true"
                         netlify-honeypot="bot-field"
                         data-netlify-recaptcha="true">
-                        <p class="u-hidden">
-                            <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
-                          </p>
-                        <div class="field">
-                            <label for="firstName" class="field__label">First name/s</label>
-                            <input type="text" id="firstName" class="field__input">
-                        </div>
-                        <div class="field">
-                            <label for="lastName" class="field__label">Last name</label>
-                            <input type="text" id="lastName" class="field__input">
-                        </div>
-                        <div class="field">
-                            <label for="company" class="field__label">Company</label>
-                            <input type="text" id="company" class="field__input">
-                        </div>
-                        <div class="field">
-                            <label for="address" class="field__label">Address</label>
-                            <input type="text" id="address" class="field__input">
-                        </div>
-                        <div class="field field-expand">
-                            <label for="textarea" class="field__label">Other information</label>
-                            <textarea id="textarea" class="field__textarea" cols="30" rows="10"></textarea>
-                        </div>
-                        <div class="field field-expand">
-                            <label for="membershipOptions" class="field__label">Membership:</label>
-                            <div class="membershipOptions" id="membershipOptions">
-                                <div class="membershipOptions__checkbox">
-                                    <input type="radio" id="normal" name="contact" value="normal" class="membershipOptions__input">
-                                    <label for="normal" class="membershipOptions__label">Normal</label>
-                                </div>
-                                <div class="membershipOptions__checkbox">
-                                    <input type="radio" id="basic" name="contact" value="basic" class="membershipOptions__input">
-                                    <label for="basic" class="membershipOptions__label">Basic</label>
-                                </div>
-                                <div class="membershipOptions__checkbox">
-                                    <input type="radio" id="premium" name="contact" value="premium" class="membershipOptions__input">
-                                    <label for="premium" class="membershipOptions__label">Premium</label>
-                                </div>
-                                <div class="membershipOptions__checkbox">
-                                    <input type="radio" id="gold" name="contact" value="gold" class="membershipOptions__input">
-                                    <label for="gold" class="membershipOptions__label">Gold</label>
+                        <fieldset class="formulario__fieldset">
+                            <legend class="formulario__title">Costumers administration</legend>
+                            <p class="u-hidden">
+                                <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
+                            </p>
+                            <div class="field">
+                                <label for="firstName" class="field__label">First name/s</label>
+                                <input type="text" id="firstName" class="field__input" placeholder="Anthon Blue">
+                            </div>
+                            <div class="field">
+                                <label for="lastName" class="field__label">Last name</label>
+                                <input type="text" id="lastName" class="field__input" placeholder="Smith">
+                            </div>
+                            <div class="field">
+                                <label for="company" class="field__label">Company</label>
+                                <input type="text" id="company" class="field__input" placeholder="Platzi Co">
+                            </div>
+                            <div class="field">
+                                <label for="address" class="field__label">Address</label>
+                                <input type="text" id="address" class="field__input" placeholder="Playa del Carmen, 5th Ave.">
+                            </div>
+                            <div class="field field-expand">
+                                <label for="textarea" class="field__label">Other information</label>
+                                <textarea id="textarea" class="field__textarea" cols="30" rows="10" placeholder="Write something..."></textarea>
+                            </div>
+                            <div class="field field-expand">
+                                <label for="membershipOptions" class="field__label">Membership:</label>
+                                <div class="membershipOptions" id="membershipOptions">
+                                    <div class="membershipOptions__checkbox">
+                                        <input type="radio" id="normal" name="contact" value="normal" class="membershipOptions__input">
+                                        <label for="normal" class="membershipOptions__label">Normal</label>
+                                    </div>
+                                    <div class="membershipOptions__checkbox">
+                                        <input type="radio" id="basic" name="contact" value="basic" class="membershipOptions__input">
+                                        <label for="basic" class="membershipOptions__label">Basic</label>
+                                    </div>
+                                    <div class="membershipOptions__checkbox">
+                                        <input type="radio" id="premium" name="contact" value="premium" class="membershipOptions__input">
+                                        <label for="premium" class="membershipOptions__label">Premium</label>
+                                    </div>
+                                    <div class="membershipOptions__checkbox">
+                                        <input type="radio" id="gold" name="contact" value="gold" class="membershipOptions__input">
+                                        <label for="gold" class="membershipOptions__label">Gold</label>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="field field-expand field-submit">
-                            <input type="submit" class="field__submit" value="Submit">
-                        </div>
-                        <div data-netlify-recaptcha="true"></div>
+                            <div class="field field-expand field-submit">
+                                <input type="submit" class="field__submit" value="Submit">
+                            </div>
+                            <div 
+                                class="field field-expand -reCaptcha" 
+                                data-netlify-recaptcha="true">
+                            </div>
+                        </fieldset>
                     </form>
                 </div>
             </main>

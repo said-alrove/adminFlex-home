@@ -1,9 +1,0 @@
-//********************************* 
-//* PANEL 
-//*********************************
-.container {
-    &-panel {
-        @include less.flexbox($dir: column);
-        min-block-size: 100vh;    
-    }
-}
