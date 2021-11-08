@@ -74,9 +74,15 @@
             text-align: center;
             text-decoration: none;
             transition: background-color 250ms ease-in-out;
+            @media (prefers-color-scheme: dark) {
+                background-color: color.scale(map.get(abs.$clr, 'blue', '100'), $lightness: abs.$darkMode);
+            }
 
             &:hover {
                 background-color: map.get(abs.$clr, 'blue', '400');
+                @media (prefers-color-scheme: dark) {
+                    background-color: color.scale(map.get(abs.$clr, 'blue', '400'), $lightness: abs.$darkMode);
+                }    
                 cursor: pointer;
             }
         }
@@ -90,7 +96,7 @@
     &__label,
     &__textarea,
     &__submit {
-        padding: 1.6rem .8rem;
+        padding: 1.6rem;
         appearance: none;
         border: none;
         border-radius: .5rem;
@@ -103,7 +109,6 @@
     &__textarea { 
         flex-grow: 1;
         resize: none;
-        padding: 1.6rem !important; 
     }
 
     &__input:focus,

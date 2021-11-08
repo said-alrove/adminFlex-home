@@ -32,10 +32,15 @@ The eighth project from Juan Pablo's course of [CSS Grid and Flexbox](https://ww
 
 > **Note:** I didn't try to change the colors directly from the variables because there are some components where the change of lightness isn't as accurate as wished, therefore it's better to modif each individual case where the dark-mode looks good.
 
+* [**Prefers-reduced-motion**](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion) was also used in this project in order to put into practice more useful features that may start to have more relevancy in coming years.
+
+> **Important:** even when I tried to include both **prefers-color-scheme** and **prefers-reduced-motion**, there weren't too much oportunities where to use them more in deep, but I'll try to include more these feature in future and past projects anyways.
+
 ## Lectures 📚
 - [Alternative Text](https://webaim.org/techniques/alttext/)
 - [Git removing upstream from local respository](https://stackoverflow.com/questions/19801455/git-removing-upstream-from-local-repository)
 - [Prefers-color-scheme](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme)
+- [Prefers-reduced-motion](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion)
 
 ## Preview 👩‍💻
 ![](readme/screenshot.png)

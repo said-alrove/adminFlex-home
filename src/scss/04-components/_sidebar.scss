@@ -60,10 +60,12 @@
                 padding: .8rem;
                 color: map.get(abs.$clr, 'white');
                 transition: padding-inline-start 250ms ease-in-out;
+                @media (prefers-reduced-motion) { transition: none; }
 
                 &:hover,
                 &:focus {
                     padding-inline-start: 3.2rem;
+                    @media (prefers-reduced-motion) { padding: .8rem; }
                     background-color: map.get(abs.$clr, 'blue', '100');
                     @media (prefers-color-scheme: dark) {
                         background-color: color.scale(map.get(abs.$clr, 'blue', '100'), $lightness: abs.$darkMode)
@@ -76,6 +78,9 @@
                 margin-block-start: 1.6rem;
                 padding: 1.6rem;
                 background-color: map.get(abs.$clr, 'gray', '300');
+                @media (prefers-color-scheme: dark) {
+                    background-color: color.scale(map.get(abs.$clr, 'gray', '300'), $lightness: abs.$darkMode);
+                }
             }
 
             &_subItem { 

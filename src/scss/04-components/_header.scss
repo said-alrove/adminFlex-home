@@ -58,7 +58,12 @@
         color: map.get(abs.$clr, 'white'); 
         transition: all 150ms ease-in-out;
 
-        &:hover { background-color: map.get(abs.$clr, 'blue', '200'); }
+        &:hover { 
+            background-color: map.get(abs.$clr, 'blue', '200'); 
+            @media (prefers-color-scheme: dark) {
+                background-color: color.scale(map.get(abs.$clr, 'blue', '200'), $lightness: abs.$darkMode);
+            }
+        }
 
         &_span {
             margin-inline-start: .8em;
